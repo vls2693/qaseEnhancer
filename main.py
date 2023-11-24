@@ -1,15 +1,15 @@
-import removeallattachmentsmultithreadingversion
+import clearall
 import tokens
 import threading
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
-    t1 = threading.Thread(removeallattachmentsmultithreadingversion.remove_all_attachments(tokens.red))
-    t2 = threading.Thread(removeallattachmentsmultithreadingversion.remove_all_attachments(tokens.green))
-    t3 = threading.Thread(removeallattachmentsmultithreadingversion.remove_all_attachments(tokens.yellow))
-    t4 = threading.Thread(removeallattachmentsmultithreadingversion.remove_all_attachments(tokens.white))
-    t5 = threading.Thread(removeallattachmentsmultithreadingversion.remove_all_attachments(tokens.black))
+    t1 = threading.Thread(clearall.clear_all(tokens.red))
+    t2 = threading.Thread(clearall.clear_all(tokens.green))
+    t3 = threading.Thread(clearall.clear_all(tokens.yellow))
+    t4 = threading.Thread(clearall.clear_all(tokens.white))
+    t5 = threading.Thread(clearall.clear_all(tokens.black))
 
     t1.start()
     t2.start()

@@ -10,7 +10,7 @@ def remove_all_projects(token):
     for i in range(0, amount_of_projects):
         project_list.append(data['result']['entities'][i]['code'])
 
-    for project_code in range(0, len(project_list)):
+    for project_code in project_list:
         remove_response = remove.remove_project_by_code(token, project_code)
         remove_status = json.loads(remove_response.text)['status']
         print(remove_status)
