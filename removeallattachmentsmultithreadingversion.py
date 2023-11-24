@@ -1,13 +1,11 @@
 import json
 import methods.getallattachments as get
 import methods.removeattachmentbyhash as delete
-import tokens
 
 
 def remove_all_attachments(token):
     # parse get response
     data = json.loads(get.get_all_attachments(token).text)
-    # print(response.text)
     total_amount_of_attachments = data['result']['total']
     amount_of_calls = (total_amount_of_attachments // 100) + 1
     for call in range(0, amount_of_calls):
@@ -26,10 +24,10 @@ def remove_all_attachments(token):
             for hash_to_show in hashes:
                 print(hash_to_show)
             # remove attachments
-            # for attachment_hash in range(0, len(hashes)):
-            #     remove_response = delete.remove_attachment_by_hash(token, hashes[attachment_hash])
-            #     remove_status = json.loads(remove_response.text)['status']
-            #     print(remove_status)
-            #     print(remove_response.text)
-            #     if remove_status is False:
-            #         break
+            for attachment_hash in range(0, len(hashes)):
+                remove_response = delete.remove_attachment_by_hash(token, hashes[attachment_hash])
+                remove_status = json.loads(remove_response.text)['status']
+                print(remove_status)
+                print(remove_response.text)
+                if remove_status is False:
+                    break

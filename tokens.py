@@ -1,7 +1,7 @@
-red = "f44e055abcfdb0ac79bf0ba50777e78312d0524fab7ceb407a9322df8c94170f"
-green = "c772853197e642c29f76a9619eb17b0baf6f7acb5393ed0ea2bddf9f3757dac0"
-yellow = "d2b676d710a1da4410991d735c8d4f4d2f46739adbe6a770556786e85040e9f6"
-white = "5e1348e9c1e5ea66aa47eaaa2d96e87f24d7edbe8659e1370d8b3dc859f65fb9"
-black = "527f85e3baaa4161d173f270ee93887cc0bcf37c2d0721d354830cc12e34d7b1"
+red = ""
+green = ""
+yellow = ""
+white = ""
+black = ""
 
 token_list = [red, green, yellow, white, black]
