@@ -27,10 +27,10 @@ def remove_all_attachments():
                 for hash_to_show in hashes:
                     print(hash_to_show)
                 # remove attachments
-                for attachment_hash in range(0, len(hashes)):
-                    remove_response = delete.remove_attachment_by_hash(token, hashes[attachment_hash])
-                    remove_status = json.loads(remove_response.text)['status']
-                    print(remove_status)
-                    print(remove_response.text)
-                    if remove_status is False:
-                        break
+                # for attachment_hash in range(0, len(hashes)):
+                #     remove_response = delete.remove_attachment_by_hash(token, hashes[attachment_hash])
+                #     remove_status = json.loads(remove_response.text)['status']
+                #     print(remove_status)
+                #     print(remove_response.text)
+                #     if remove_status is False:
+                #         break
