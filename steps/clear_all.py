@@ -1,5 +1,4 @@
-import removeallattachmentsmultithreadingversion as attachments
-import removeallprojects as projects
+from steps import remove_all_attachments as attachments, remove_all_projects as projects
 
 
 def clear_all(token):
