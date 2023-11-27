@@ -20,11 +20,9 @@ def remove_all_attachments(token):
             hashes = []
             for attachment in attachment_list:
                 hashes.append(attachment['hash'])
-            for hash_to_show in hashes:
-                print(hash_to_show)
             # remove attachments
-            for attachment_hash in range(0, len(hashes)):
-                remove_response = attachments.remove_attachment_by_hash(token, hashes[attachment_hash])
+            for hash_to_remove in hashes:
+                remove_response = attachments.remove_attachment_by_hash(token, hash_to_remove)
                 remove_status = json.loads(remove_response.text)['status']
                 print(remove_status)
                 print(remove_response.text)
